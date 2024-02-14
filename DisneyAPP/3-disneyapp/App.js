@@ -3,17 +3,27 @@ import { StyleSheet, Text, View } from 'react-native';
 import PokemonList from './src/screens/PokemonList';
 import LoginForm from './src/screens/LoginForm';
 import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import NavigationStacks from './src/navigation/NavigationStacks';
+
+
 
 export default function App() {
   //return <PokemonList/>
   return (
-    <View> 
-      <LoginForm name="Bryan Davila" surname="Davila" age="20"/>
-      <LoginForm name="Pepe pepe pepe"  surname="Davila" age="20"/>
-      <LoginForm name="Luis Luis Luis"  surname="Davila" age="20"/>
-      <LoginForm name="Carla Carla Carla"  surname="Davila" age="20"/>
 
-    </View>
+    <NavigationContainer>
+      <NavigationStacks/>
+    </NavigationContainer>
+
+    // <View> 
+
+    //   {/* <LoginForm name="Bryan Davila" surname="Davila" age="20"/>
+    //   <LoginForm name="Pepe pepe pepe"  surname="Davila" age="20"/>
+    //   <LoginForm name="Luis Luis Luis"  surname="Davila" age="20"/>
+    //   <LoginForm name="Carla Carla Carla"  surname="Davila" age="20"/> */}
+
+    // </View>
   );
 
   
