@@ -13,19 +13,19 @@ import { Client } from 'pg';
 import { PeliculasModule } from './peliculas/peliculas.module';
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED='0';
-const client = new Client({
-  user: 'postgres',
-  host: 'rds-dam-postgresql.cdc8o82kagmd.us-east-1.rds.amazonaws.com',
-  database: 'dam',
-  password: 'LUCASLUCAS',
-  port: 5432,
-  ssl: true, 
-});
-client.connect();
-client.query('SELECT * FROM task ORDER BY id ASC', (err, res) => {
-  console.error(err);
-  console.log(res.rows);
-});
+// const client = new Client({
+//   user: 'postgres',
+//   host: 'rds-dam-postgresql.cdc8o82kagmd.us-east-1.rds.amazonaws.com',
+//   database: 'dam',
+//   password: 'LUCASLUCAS',
+//   port: 5432,
+//   ssl: true, 
+// });
+// client.connect();
+// client.query('SELECT * FROM task ORDER BY id ASC', (err, res) => {
+//   console.error(err);
+//   console.log(res.rows);
+// });
 
 
 @Module({
