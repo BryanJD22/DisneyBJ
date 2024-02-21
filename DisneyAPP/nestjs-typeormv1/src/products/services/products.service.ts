@@ -12,20 +12,18 @@ export class ProductsService {
   constructor(
     @InjectRepository(Product) private productRepo: Repository<Product>,
     @InjectRepository(Category) private categoryRepo: Repository<Category>
-    
-    ){}
-
-  // private counterId = 1;
-  // private products: Product[] = [
-  //   {
-  //     id: 1,
-  //     name: 'Producto 1',
-  //     description: 'lorem lorem',
-  //     price: 10000,
-  //     stock: 300,
-  //     image: 'https://i.imgur.com/U4iGx1j.jpeg',
-  //   },
-  // ];
+  ){}
+  /*private counterId = 1;
+  private products: Product[] = [
+    {
+      id: 1,
+      name: 'Producto 1',
+      description: 'lorem lorem',
+      price: 10000,
+      stock: 300,
+      image: 'https://i.imgur.com/U4iGx1j.jpeg',
+    },
+  ];*/
 
   findAll() {
     return this.productRepo.find(); // usa Repository
@@ -61,12 +59,11 @@ export class ProductsService {
     // newProduct.stock = data.stock;
     // newProduct.image = data.image;
     const newProduct = this.productRepo.create(data);
+
     if (data.categoriesIds) {
-      
       const categories = await this.categoryRepo.findByIds(data.categoriesIds);
       newProduct.categories = categories;
     }
-
 
 // Encuentra las coincidencias y las actualiza
     return this.productRepo.save(newProduct);

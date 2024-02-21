@@ -8,7 +8,7 @@ export class Category {
 
   @Column({ type: 'varchar', length: 255, unique: true})
   name: string;
-  
+
   @CreateDateColumn({
     type: 'timestamptz',
     default: ()=> 'CURRENT_TIMESTAMP'
@@ -20,6 +20,7 @@ export class Category {
     default: ()=> 'CURRENT_TIMESTAMP'
   })
   updateAt: Date;
+
   // src\products\entities\category.entity.ts
   @ManyToMany(()=>Product, (product)=>product.categories)
   @JoinTable() // Solo debe estar en una entidad, , ES LA PARTE FÍSICA
