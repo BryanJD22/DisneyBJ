@@ -17,8 +17,8 @@ export default function App() {
       <LoginForm name="CARLA" surname="CARLA CARLA"/>
     </View>*/
     <NavigationContainer>
-      <NavigationTabs />
-      
+      {/*1º) <NavigationStacks /> */}
+      <NavigationTabs/>
     </NavigationContainer>
   );
       
