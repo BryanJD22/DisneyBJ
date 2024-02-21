@@ -7,6 +7,7 @@ import {
   Image,
   TextInput,
 } from "react-native";
+import PokemonCard from "../components/PokemonCard";
 
 
 export default function PokemonList(props) {
