@@ -1,0 +1,11 @@
+//TESTING REACT NATIVE
+//VIDEO YOUTUBE
+https://youtu.be/Fp6qfb5RR20?si=OuGbb3dzdL1Xzwgz
+//TEST RENDER
+https://legacy.reactjs.org/docs/test-renderer.html
+//LIBRERIA TESTING REACT NATIVE
+https://testing-library.com/docs/react-native-testing-library/intro/
+//DOCUMENTACION JEST.JS
+https://jestjs.io/docs/getting-started
+	--PARA TYPESCRIPT
+		https://jestjs.io/docs/getting-started#using-typescript
