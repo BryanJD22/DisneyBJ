@@ -10,7 +10,8 @@ import { Pelicula } from './pelicula.entity';
 
 
 @Entity('favoritos')
-export class Favorito {
+export class Favorito { 
+
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -35,5 +36,7 @@ export class Favorito {
   @ManyToOne(() => Pelicula, (pelicula) => pelicula.favoritos)
   @JoinColumn({ name: 'pelicula_id' })
   pelicula: Pelicula;
+
+
 }
 
